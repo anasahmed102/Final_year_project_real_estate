@@ -4,10 +4,10 @@ import 'package:real_estaye_app/core/widgets/snack_bar.dart';
 import 'package:real_estaye_app/features/auth/logic/bloc/auth_bloc.dart';
 import 'package:real_estaye_app/features/posts/logic/bloc/posts_bloc.dart';
 import 'package:real_estaye_app/presentation/pages/add_property.dart';
-import 'package:real_estaye_app/presentation/widgets/proerty_widget.dart';
 import 'package:real_estaye_app/presentation/pages/sign_in_page.dart';
 import 'package:real_estaye_app/presentation/widgets/loading_widget.dart';
 import 'package:real_estaye_app/presentation/widgets/my_error_widget.dart';
+import 'package:real_estaye_app/presentation/widgets/proerty_widget.dart';
 
 class HomePageClean extends StatefulWidget {
   const HomePageClean({super.key});
@@ -17,7 +17,6 @@ class HomePageClean extends StatefulWidget {
 }
 
 class _HomePageCleanState extends State<HomePageClean> {
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +35,7 @@ class _HomePageCleanState extends State<HomePageClean> {
         actions: [
           IconButton(
               onPressed: () {
-            BlocProvider.of<AuthBloc>(context).add(LogoutEvent());
+                BlocProvider.of<AuthBloc>(context).add(LogoutEvent());
               },
               icon: const Icon(Icons.exit_to_app))
         ],
@@ -51,9 +50,9 @@ class _HomePageCleanState extends State<HomePageClean> {
           } else if (state is MessageState) {
             SnackBarMessage()
                 .showSuccessSnackBar(message: state.message, context: context);
-                Navigator.pushAndRemoveUntil(
+            Navigator.pushAndRemoveUntil(
                 context,
-                MaterialPageRoute(builder: (_) => const TempLoginPage()),
+                MaterialPageRoute(builder: (_) => const LoginPage()),
                 (route) => false);
           }
         },

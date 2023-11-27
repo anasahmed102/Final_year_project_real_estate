@@ -12,7 +12,6 @@ import 'package:real_estaye_app/splash_screen.dart';
 
 void main() async {
   Bloc.observer = MyBlocObserver();
-
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

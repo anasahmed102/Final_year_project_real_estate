@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   (route) => false);
             } else if (state is AuthInitial) {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (BuildContext context) => const TempLoginPage(),
+                builder: (BuildContext context) => const LoginPage(),
               ));
             }
           });
@@ -37,7 +37,9 @@ class _SplashScreenState extends State<SplashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              FlutterLogo(size: 150,)
+              FlutterLogo(
+                size: 150,
+              )
             ],
           ),
         ),

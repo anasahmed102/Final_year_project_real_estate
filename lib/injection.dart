@@ -39,7 +39,7 @@ void initBinding() async {
   getIt.registerSingleton<AuthRemoteDataSource>(
       AuthRemoteDataSourceImpl(auth: firebaseAuth, googleSignIn: googleSignIn));
   getIt.registerSingleton<AuthLocalDataSource>(
-      AuthLocalDataSourceImpl(sharedPreferences: sharedPreferences));
+      AuthLocalDataSourceImpl());
   getIt.registerSingleton<AuthRepository>(AuthRepositoryImpl(
       authRemoteDataSource: getIt(),
       authLocalDataSource: getIt(),
