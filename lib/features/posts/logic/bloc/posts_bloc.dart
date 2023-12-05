@@ -14,12 +14,12 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
   PostsBloc() : super(PostsInitial()) {
     on<PostsEvent>((event, emit) async {
       if (event is GetAllPostEvent) {
-        emit(LoadingTodoState());
+        emit(LoadingPostsState());
 
         final failureOrPost = await GetAllTodoUsecases(getIt()).call();
         emit(_mapfilureorPostToState(failureOrPost));
       } else if (event is RefreshAllPostEvent) {
-        emit(LoadingTodoState());
+        emit(LoadingPostsState());
 
         final failureOrPost = await GetAllTodoUsecases(getIt()).call();
         emit(_mapfilureorPostToState(failureOrPost));
@@ -29,11 +29,12 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
 
   PostsState _mapfilureorPostToState(
       Either<Failure, Stream<List<RealEstateModel>>> either) {
-      final result = either.fold(
-        (l) => const ErrorTodosState(message: "Error Please Check your internet connection and try again later"),
-        (r) => LoadedTodosState(realEstate: r),
-      );
-      return result;
-    
+    final result = either.fold(
+      (l) => const ErrorPostsState(
+          message:
+              "Error Please Check your internet connection and try again later"),
+      (r) => LoadedPostsState(realEstate: r),
+    );
+    return result;
   }
 }

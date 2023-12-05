@@ -8,21 +8,21 @@ abstract class PostsState extends Equatable {
   List<Object> get props => [];
 }
 
+class PostsInitial extends PostsState {}
 
- class PostsInitial extends PostsState {}
-class LoadingTodoState extends PostsState {}
+class LoadingPostsState extends PostsState {}
 
-class ErrorTodosState extends PostsState {
+class ErrorPostsState extends PostsState {
   final String message;
-  const ErrorTodosState({
+  const ErrorPostsState({
     required this.message,
   });
 }
 
-class LoadedTodosState extends PostsState {
+class LoadedPostsState extends PostsState {
   final Stream<List<RealEstateModel>> realEstate;
 
-  const LoadedTodosState({required this.realEstate});
+  const LoadedPostsState({required this.realEstate});
 
   @override
   List<Object> get props => [realEstate];
