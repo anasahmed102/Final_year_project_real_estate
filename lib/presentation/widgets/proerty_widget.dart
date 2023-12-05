@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:real_estaye_app/core/widgets/search_delegates.dart';
 import 'package:real_estaye_app/core/widgets/snack_bar.dart';
 import 'package:real_estaye_app/features/auth/logic/bloc/auth_bloc.dart';
 import 'package:real_estaye_app/features/posts/data/model/real_estate.dart';
 import 'package:real_estaye_app/presentation/pages/add_property.dart';
 import 'package:real_estaye_app/presentation/pages/details_page.dart';
 import 'package:real_estaye_app/presentation/pages/sign_in_page.dart';
-import 'package:real_estaye_app/presentation/widgets/search_delegate.dart';
 
 class PropertWidget extends StatefulWidget {
   final Stream<List<RealEstateModel>> realEstae;
