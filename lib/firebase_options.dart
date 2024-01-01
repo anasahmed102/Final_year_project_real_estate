@@ -65,6 +65,7 @@ class DefaultFirebaseOptions {
     projectId: 'third-essence-403420',
     databaseURL: 'https://third-essence-403420-default-rtdb.firebaseio.com',
     storageBucket: 'third-essence-403420.appspot.com',
+    androidClientId: '750052531746-8tg76umkfupvr2pqjvpbhrrq12habbnr.apps.googleusercontent.com',
     iosClientId: '750052531746-k5sb619q2049du9gak67bjvtb8ior8oi.apps.googleusercontent.com',
     iosBundleId: 'com.example.realEstayeApp',
   );

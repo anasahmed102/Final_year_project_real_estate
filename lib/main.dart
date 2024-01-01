@@ -16,12 +16,12 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  initBinding();
 
   await FirebaseAppCheck.instance.activate(
     androidProvider: AndroidProvider.debug,
     appleProvider: AppleProvider.debug,
   );
-  initBinding();
   runApp(const MyApp());
 }
 
@@ -44,6 +44,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         theme: ThemeData(
+          useMaterial3: false,
           primarySwatch: Colors.red,
         ),
         debugShowCheckedModeBanner: false,

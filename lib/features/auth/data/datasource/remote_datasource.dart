@@ -35,7 +35,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
       );
       return Future.value(user);
     } on firebaseauth.FirebaseAuthException catch (e) {
-      throw (e.message!);
+      throw ("Wrond Data Please Check Your Email And Password");
     }
   }
 

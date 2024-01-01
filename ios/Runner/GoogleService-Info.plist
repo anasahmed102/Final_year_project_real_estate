@@ -2,18 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CLIENT_ID</key>
+	<string>750052531746-k5sb619q2049du9gak67bjvtb8ior8oi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.750052531746-k5sb619q2049du9gak67bjvtb8ior8oi</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>750052531746-8tg76umkfupvr2pqjvpbhrrq12habbnr.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyA8YUy2XHm-d7pGTZA9tCsNzc62fUMfFYA</string>
+	<string>AIzaSyCYJdmZQ8jgNtsoh7adQkU7JxVW9SJDfnY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>985250120606</string>
+	<string>750052531746</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.realEstayeApp</string>
 	<key>PROJECT_ID</key>
-	<string>fir-project-efdc5</string>
+	<string>third-essence-403420</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fir-project-efdc5.appspot.com</string>
+	<string>third-essence-403420.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +31,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:985250120606:ios:0078cd4721f3934a150c8f</string>
+	<string>1:750052531746:ios:c28eed6f9ff3b3fb5c747b</string>
+	<key>DATABASE_URL</key>
+	<string>https://third-essence-403420-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

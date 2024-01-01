@@ -106,7 +106,7 @@ class DetailsPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                _launchPhoneDialer("7704051753");
+                _launchPhoneDialer("7701618237");
               },
               child: const Text(
                 'Contact Agent',

@@ -7,6 +7,7 @@ import 'package:real_estaye_app/features/posts/data/model/real_estate.dart';
 import 'package:real_estaye_app/presentation/pages/add_property.dart';
 import 'package:real_estaye_app/presentation/pages/details_page.dart';
 import 'package:real_estaye_app/presentation/pages/sign_in_page.dart';
+import 'package:real_estaye_app/presentation/widgets/loading_widget.dart';
 
 class PropertWidget extends StatefulWidget {
   final Stream<List<RealEstateModel>> realEstae;
@@ -112,7 +113,7 @@ class _PropertWidgetState extends State<PropertWidget> {
           } else if (snapshot.hasError) {
             return Text('Error: ${snapshot.error}');
           } else {
-            return const CircularProgressIndicator();
+            return const LoadingWidget();
           }
         },
       ),
